@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+   <style></style>
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="num1" placeholder="Enter your name:">
+    <input type="number" id="num2" placeholder="Enter your name:">
+    <button onclick="f1(document.getElementById('num1').value,document.getElementById('num2').value)">sum</button>
+    <button onclick="f2(document.getElementById('num1').value,document.getElementById('num2').value)"> menha</button>
+    <button onclick="f3(document.getElementById('num1').value,document.getElementById('num2').value)"> zarb</button>
+    <button onclick="f4(document.getElementById('num1').value,document.getElementById('num2').value)"> taghsim</button>
+    <br>
+    <p id="alert"></p>
+
+
+    <script>
+        function f1(a,b){
+            var s=  parseInt(a)+ parseInt(b);
+            // alert(s);
+            document.getElementById('alert').innerText=s;
+            document.getElementById('alert').style.color="red";
+        }
+        function f2(a,b){
+            var s=  parseInt(a)- parseInt(b);
+            // alert(s);
+            document.getElementById('alert').innerText=s;
+            document.getElementById('alert').style.color="blue";
+        }
+        function f3(a,b){
+            var s=  parseInt(a)* parseInt(b);
+            // alert(s);
+            document.getElementById('alert').innerText=s;
+            document.getElementById('alert').style.c
+        }
+        function f4(a,b){
+            var s=  parseInt(a)/parseInt(b);
+            // alert(s);
+            document.getElementById('alert').innerText=s;
+        }
+
+    </script>
+</body>
+</html>

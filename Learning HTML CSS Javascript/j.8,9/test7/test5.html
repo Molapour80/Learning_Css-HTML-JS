@@ -1,0 +1,52 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+  </head>
+  <body>
+    <input
+      type="text"
+      id="r1"
+      placeholder="Enter your name:"
+      onkeyup="f(this.value)"
+    />
+    <p id="jodi"></p>
+    <!-- <script>
+
+      function f1( r1) {
+        let r1;
+        if (r1 == "world ") {
+          document.getElementById("jodi").innerText = "جهان";
+          
+        } else if (r1 == "word") {
+          document.getElementById("jodi").innerText = "کلمه";
+        } else if (r1 == "book") {
+          document.getElementById("jodi").innerText = "کتاب";
+        } else if (r1 == "cat") {
+          document.getElementById("jodi").innerText = " گربه";
+        } else {
+          document.getElementById("jodi").innerText = "وجود ندارد";
+        }
+      }
+    </script> -->
+    <script>
+        function f1(word) {
+  let jodi;
+  if (word == "note book") {
+    jodi= "daftar";
+  } else if (word == "book") {
+    jodi = "ketab";
+  } else if (word == "dog") {
+    jodi = "sag";
+  } else {
+    jodi = "null";
+  }
+  document.getElementById("r1").innerText = jodi;
+}
+
+    </script>
+  </body>
+</html>

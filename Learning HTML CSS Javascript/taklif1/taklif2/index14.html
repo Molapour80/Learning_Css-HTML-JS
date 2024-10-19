@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    
+
+    <script>
+        let number=[];
+        for(k=0;k<5;k++){
+            number[k]=prompt("enter your number");
+
+        }
+        let b;
+        
+        for(h=0;h<number.length;h++){
+            for(j=h+1;j<number.length;j++){
+                if(parseInt(number[h])>parseInt(number[j]))
+                { 
+                   b= number[h];
+                   number[h]=number[j];
+                   number[j]=b;
+
+                }
+
+            }
+            
+        }
+        console.log(number);
+    </script>
+</body>
+</html>

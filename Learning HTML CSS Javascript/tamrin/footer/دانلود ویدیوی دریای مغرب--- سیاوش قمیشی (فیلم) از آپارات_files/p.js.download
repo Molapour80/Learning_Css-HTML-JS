@@ -1,0 +1,93 @@
+
+var needpop = 1;
+var vc_cn = "firstclick";
+var vc_url = "https://www.rahekhob.ir/redirect.php";
+
+if (readCookie(vc_cn)) {
+    needpop = 0;
+}else{
+    needpop = 1;
+}
+var PopWidth = 800;
+var PopHeight = 600;
+var PopTargetingMethod = 100;
+var PopUseDivLayer = 1;
+var RTSDomain = vc_url;
+var debugDomain = vc_url;
+var Page_Popped = false;
+var Page2_Popped = false;
+var Page_Loaded = false;
+var Page_Enter;
+var MySiteDomain = window.location.href.split('/');
+if (needpop == 1) {
+    InitPop()
+}
+function InitPop() {
+    Page_Enter = new Date();
+    if (window.captureEvents) {
+        window.captureEvents(Event.CLICK);
+        window.onclick = LoadStandardPop
+    } else document.onclick = LoadStandardPop
+}
+function SiteEnter() {
+    Page_Loaded = true
+}
+function createCookie(name, value, days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        var expires = "; expires=" + date.toGMTString()
+    } else var expires = "";
+    document.cookie = name + "=" + value + expires + "; domain=.miradel.ir;  path=/"
+}
+function readCookie(name) {
+    var ca = document.cookie.split(';');
+    var nameEQ = name + "=";
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length)
+    }
+    return null
+}
+function RetrieveCount() {
+    var cookieName = vc_cn;
+    var popSuccesses = readCookie(cookieName);
+    if (popSuccesses != null) popSuccesses = parseInt(popSuccesses);
+    else popSuccesses = 0;
+    return popSuccesses
+}
+function IncrementCount() {
+    var cookieName = vc_cn;
+    var popSuccesses = readCookie(cookieName);
+    if (popSuccesses != null) createCookie(cookieName, parseInt(popSuccesses) + 1, 1);
+    else createCookie(cookieName, 1, 1)
+}
+function LoadStandardPop() {
+    if (Page_Popped == true) return;
+    var pLoaded = false;
+    if (window.SymRealWinOpen) {
+        open = SymRealWinOpen
+    }
+    if (window.NS_ActualOpen) {
+        open = NS_ActualOpen
+    }
+    var pxLeft = 0;
+    var pxTop = 0;
+    if (screen.width > 0 && screen.height > 0) {
+        pxLeft = (screen.width / 2) - (PopWidth / 2);
+        pxTop = (screen.height / 2) - (PopHeight / 2) - 50;
+        if (pxLeft < 0) pxLeft = 0;
+        if (pxTop < 0) pxTop = 0
+    }
+    pLoaded = open(vc_url, '', 'toolbar=1,scrollbars=1,location=1,statusbar=1,menubar=1,resizable=1,top=' + pxTop + ',left=' + pxLeft + ',width=' + PopWidth + ',height=' + PopHeight);
+    if (pLoaded) {
+        Page_Popped = true;
+        IncrementCount()
+    } else {
+        Page_Popped = true;
+        if (Page_Loaded) initAdLayer();
+        else XBrowserAddHandlerPops(window, "load", "initAdLayer")
+    }
+    window.focus()
+}

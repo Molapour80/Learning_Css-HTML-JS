@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <style>
+        #e1{
+            width: 200px;
+            height: 200px;
+            border: 10px solid black;
+            background-color: rgb(98, 149, 41);
+            
+            animation-name: animation1;
+            animation-timing-function: ease-out;
+            animation-duration: 3s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            
+        }
+        @keyframes animation1{
+            from{0px}
+            to{margin-left: 1000px; background-color : blue ;transform : rotate(6s);margin-top: 500px;}
+        }
+        #w1{
+            width: 200px;
+            height: 200px;
+            border: 10px solid rgb(0, 0, 0);
+            background-color: rgb(75, 41, 149); 
+            animation-name: animation2;
+            animation-timing-function: ease-in;
+            animation-duration: 3s;
+            animation-delay: 2s;
+            animation-iteration-count: 2;
+            
+        }
+        @keyframes animation2{
+            from{0px}
+            to{margin-left: 1000px; background-color : rgb(235, 22, 200) ;transform : perspective(6s);margin-top: 500px;}
+        }
+        }
+    </style>
+        <title>80</title>
+</head>
+<body>
+    <div id="e1"></div>
+    <div id="w1"></div>
+
+    
+</body>
+</html>

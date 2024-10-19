@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+        #btn1{
+            background-color: red;
+            color: aliceblue;
+        }
+    </style>
+  </head>
+  <body>
+    <img src="lamp/lamp off.png" id="e1" />
+    <!-- <button id="btn1" onclick="f1()">off</button> -->
+    <script>
+      let flag=0;
+      function f1(){
+        
+
+          if(flag==0){
+              document.getElementById("e1").src="lamp/lamp off.png";
+               flag=1;
+               document.getElementById("btn1").innerText="on";
+               document.getElementById("btn1").style.backgroundColor="red";
+
+
+
+              }
+              else{
+                  document.getElementById("e1").src="lamp/lamp on.png";
+                  flag=0;
+                  document.getElementById("btn1").innerText="off";
+               document.getElementById("btn1").style.backgroundColor="green";
+              }
+          }
+          setInterval(() => {
+            f1();
+          }, 1000);
+          
+
+      
+    </script>
+  </body>
+</html>

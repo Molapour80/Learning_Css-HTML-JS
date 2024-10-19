@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array =[];
+        for(i=0;i<5;i++){
+            array.push(prompt("enter your number"));
+        }
+        let zoj_number=0,fard_number=0;
+        for(i=0;i<array.length;i++){
+            if(array%2==0){
+                zoj_number+=1;
+
+            }
+            else{
+                fard_number+=1;
+            }
+
+        }
+        console.log("zoj="+zoj_number+"\n"+"fard="+fard_number);
+
+    </script>
+
+    
+</body>
+</html>

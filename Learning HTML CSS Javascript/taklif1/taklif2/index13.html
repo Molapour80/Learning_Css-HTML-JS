@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="num1" placeholder="ENTER your number">
+    <input type="number" id="num2" placeholder="ENTER your power">
+    <button onclick="f1(document.getElementById('num1').value,document.getElementById('num2').value )" > send</button>
+<br><br>
+    <input type="number" id="num3" placeholder="factoryel">
+<button onclick="f2(document.getElementById('num3').value)">send1</button>
+    <p id="p2"></p>
+    <p id="p1"></p>
+    <script>
+        function f1( a,b){
+            let k=1;
+            for (i=0;i<b;i++){
+                k*=a;
+            }
+            document.getElementById("p2").innerText=k;
+        }
+        function f2(a){
+            let h=1;
+            for(i=1;i<=a;i++){
+                h*=i;
+            }
+            document.getElementById("p1").innerText=h;
+        }
+
+        
+
+        
+
+
+    </script>
+    
+</body>
+</html>

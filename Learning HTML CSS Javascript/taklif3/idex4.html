@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="index4.js"></script>
+    <style>
+      #header,
+      #footer {
+        background-color: rgba(0, 149, 255, 0.551);
+        width: 100%;
+        height: 200px;
+      }
+      #content {
+        background-color: rgba(0, 149, 255, 0.551);
+        min-height: 500px;
+        width: 100%;
+      }
+
+      #tell {
+        width: 300px;
+        height: 300px;
+        background-color: pink;
+      }
+      #r1 {
+        display: flex;
+        justify-content: center;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div id="header"></div>
+    <div id="content">
+      <div id="r1">
+        <div id="tell">
+          
+            <input
+              type="text"
+              id="w1"
+              placeholder="Enter your name:"
+              onkeyup="f1(this.value)"
+            />
+            <br />
+            <h3><p id="word"></p></h3>
+          
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>

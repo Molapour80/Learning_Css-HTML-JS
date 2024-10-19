@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY game</title>
+    <script src="index2.js"></script>
+    <style>
+        #game{
+            background-color: coral;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content:center ;
+
+        }
+        #num1{
+            width: 200px;
+            height: 20px;
+            color: chocolate;
+           
+        }
+        #btn1{
+            width: 50px;
+            height: 20px;
+            color: chocolate;
+
+        }
+    </style>
+</head>
+<body>
+    <dir id="game">
+    <input type="number" id="num1" placeholder="enter your number:">
+    <button onclick="f1(document.getElementById('num1').value)" id="btn1">check</button>
+    <br>
+    <br>
+    <h2><p id="p1"></p></h2>
+    </dir>
+</body>
+</html>

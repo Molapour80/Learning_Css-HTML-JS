@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .class {
+        width: 50px;
+        height: 70px;
+        background-color: blue;
+        color: aliceblue;
+      }
+      .class1 {
+        width: 50px;
+        height: 70px;
+        background-color: blue;
+        color: aliceblue;
+        animation-name: abc;
+        animation-timing-function: step-end;
+        animation-duration: 3s;
+      }
+      @keyframes abc {
+        from {
+          margin-left: 0px;
+        }
+        to {
+          margin-left: 50px;
+          background-color: blueviolet;
+          transform: rotate3d(4);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button class="class" onclick="f( this)">send</button>
+    <script>
+      function f(ew) {
+        ew.classList.toggle("class1");
+      }
+    </script>
+  </body>
+</html>

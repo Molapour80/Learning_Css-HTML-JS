@@ -1,0 +1,1 @@
+var ThumbnailUrlConsts;(function(n){n.ThumbnailUrlDefaultDomain="th.bing.com"})(ThumbnailUrlConsts||(ThumbnailUrlConsts={}))

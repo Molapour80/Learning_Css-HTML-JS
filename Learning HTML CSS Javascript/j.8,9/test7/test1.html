@@ -1,0 +1,30 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="lampoff.png" id="h1" />
+    <button onclick="f1()" id="t1">OFF</button>
+    <script>
+      let toggel = 0;
+      function f1() {
+        if (toggel == 0) {
+          document.getElementById("h1").src = "lampoff.png";
+          toggel = 1;
+          document.getElementById("t1").innerText = "ON";
+          document.getElementById("t1").style.backgroundColor = "green";
+          document.getElementById("t1").style.color = "white";
+        } else {
+          document.getElementById("h1").src = "lampon.png";
+          toggel = 0;
+          document.getElementById("t1").innerText = "OFF";
+          document.getElementById("t1").style.backgroundColor = "red";
+          document.getElementById("t1").style.color = "white";
+        }
+      }
+    </script>
+  </body>
+</html>
