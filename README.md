@@ -1,11 +1,11 @@
-128526# CSS-HTML-JS
+:unlock:# CSS-HTML-JS
 * <h3>This project includes a series of exercises for example.</h3>
 
 # requirments:
 
-* CSS :art:
-* HTML
-* JS
+*  HTML :skull:
+*  CSS :art:
+* JS   :ghost:
 ---------------------------------------------------------------------------
-# :computer:
+# :computer:   :robot:
 
