@@ -1,9 +1,9 @@
-# 128526 CSS-HTML-JS
-* <h1>This project includes a series of exercises for example.</h1>
+128526# CSS-HTML-JS
+* <h3>This project includes a series of exercises for example.</h3>
 
 # requirments:
 
-* CSS:art:
+* CSS :art:
 * HTML
 * JS
 ---------------------------------------------------------------------------
